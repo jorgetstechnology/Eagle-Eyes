@@ -1,8 +1,8 @@
 # Eagle-Eyes
 Eagle Eyes => A powerful low level TCP networking RAT written in the Python langauge for Windows.
-______________________________________________________
+___
 Eagle Eyes is a spyware Python program created for Windows that supports multiple ways to collect data & automatically save everything organized in folders. It has two shells you will use, the first shell is to control & manage clients & options. It is also from this shell you have can connect to a client session. This will give a reverse shell like connection to a specific client with extra built in commands.
-______________________________________________________
+___
 Supported Features:
   - TCP Network stream (IPv4)
   - Compression & AES256 Encryption
@@ -28,12 +28,13 @@ Supported Features:
   - Service Creation
   - System Information
   - Location Data
-______________________________________________________
+___
 - () = Required
 - [] = Optional
 - | = Or
-
-Shell Commands:
+___
+**Shell Commands:**
+___
 - Running
 
 Get data about all the running modules, what client it is running on & its identifying number.
@@ -102,8 +103,9 @@ Clear the console.
 - Exit | Quit
 
 Exit the program for good.
-
-Session Commands:
+___
+**Session Commands:**
+___
 - Running
 
 This will return all the running modules (Stream, Cam, Audio, Keylogger, Talk), what client this module is running on & what index that module is bound to, because you can run as many modules on any & all clients at any time you will need to specify that modules id when using module commands shown below.
