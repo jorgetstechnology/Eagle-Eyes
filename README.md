@@ -72,51 +72,72 @@ This will return all the running modules (Stream, Cam, Audio, Keylogger, Talk), 
 Stream module along with all the other modules will allow you to specify a custom socket address to connect with, this is usefull if you're using port tunneling to make ports available without the need of port forwarding, otherwise if not specified it will automatically connect to the same module port & ip of the host.
   - Cam [IP:PORT] (Camera Number) (With,Height)
     - Cam Kill (Cam Index)
+
 Cam module need the camera number, if you have 2 cameras if you want to use the second camera you will have to use number 1, else if the client only has one camera use 0. You will also have to specify the width & height of the camera, this is because of a bug in the cv2 module making it neccesary to save a video file of the camera stream. You can use the devices command to find out the camera number & its size.
   - Audio [IP:PORT]
     - Audio Kill (Audio Index)
+
 The audio module will let you hear any input provided by the client into their microphone.
   - Keylogger [IP:PORT]
     - Keylogger Kill (Keylogger Index)
     - Keylogger Text (Keylogger Index)
     - Keylogger Image (Keylogger Index)
+
 The keylogger module gives you the option of writing out all the logs provided by the client in text format or vizualize the text into an black & white image with the help of the text & image commands.
   - Talk [IP:PORT]
     - Talk Kill (Talk Index)
+
 The talk module will allow you to talk into your microphone & the client will hear you, this can be used in conjunction with the audio module creating a audio conversation possibility.
   - Upload (File Name) [-e]
+
 The "-e" option will automatically execute the uploaded file on the clients computer.
   - Note => [File Name] => (Message)
+
 The note command will create a specific folder storing all your notes about a specific client with timestamps. The "File Name" is an option because otherwise it will be saved to global.txt as it is the default, .txt will also automatically if you choose to set a file name. This command can be used to handle & organize your thoughts & ideas when dealing with multiple clients. Having the notes as a backup.
   - Whoami
+
 The whoami command provides you with all the systeminfo & location data along with the initial socket data written out to the console. Making it clear who this client is & all the neccesary data you will need.
   - Time
+
 Gives you the time the session started & what the current time is.
   - Clear | Cls
+
 Clears the console.
   - Exit | Quit
+
 Exit the session & go back to your managing Shell.
   - Download (File Name) [-e]
+
 Download a file with the option to execute upon successful download.
   - Screenshot [-s]
+
 Download a screenshot of the clients computer with the option to automatically show the screenshot taken.
   - Webcam (Camera Number) [-s]
+
 Webcam will take a screenshot of a specified camera with the help of the camera number, with the option to automatically show the screenshot taken.
   - cd (File Path)
+
 Change the directory of you session shell & navigate as you would a normal command prompt. Note that system variables cannot be used.
   - Elevate (File Path)
+
 This will attempt to run the specified executeable program as administrator, if you run this on this script successfully you will be provided with an administrator shell having the privilege to create services & edit the Windows registry.
   - Service (Type) (Service Name) (File Path)
+
 If you successfully acquired a administrator shell you can create & edit services. This will make your script sticky, automatically running the program upon startup without any questions. First have to specify either to "delete" or "create" the service, the name of Z service & the absolute path of the executeable.
   - Devices
+
 Get all the webcams available on the client computer, the sizes of the cameras & their camera number.
   - Message => [Title] => (Message) => [Style]
+
 Show a message box to the client, the title of the messagebox, the default is "Message", the text of the message box & optionally the icon to be used ranging from 1-4.
   - Open (Url[,Url2, Url3, Url4])
+
 Opens one or more urls in the clients default browser.
   - ps (Powershell Command)
+
 A shorthand for using powershell commands in your command prompt shell.
   - Else Command Prompt Data [-t] [-b] [-i]
+
 If no built in command is used everything will be thrown into the clients command prompt as a subprocess returning the data provided. The flags available is "-t" which will thread the command not displaying any data on screen but will execute the command. The "-b" flag will backup the data returned into a textfile & "-i" will provide a black & white image of the results, saving it to a png file. The "-t" flag can't be used in conjunction with "-b" or "-i" but "-b" & "-i" can be used together, in any order just as long as they are in the end of the string data being sent.
 
 
