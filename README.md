@@ -64,9 +64,11 @@ Shell Commands:
     
 Session Commands:
   - Running
+
 This will return all the running modules (Stream, Cam, Audio, Keylogger, Talk), what client this module is running on & what index that module is bound to, because you can run as many modules on any & all clients at any time you will need to specify that modules id when using module commands shown below.
   - Stream [IP:PORT]
     - Stream Kill (Stream Index)
+
 Stream module along with all the other modules will allow you to specify a custom socket address to connect with, this is usefull if you're using port tunneling to make ports available without the need of port forwarding, otherwise if not specified it will automatically connect to the same module port & ip of the host.
   - Cam [IP:PORT] (Camera Number) (With,Height)
     - Cam Kill (Cam Index)
