@@ -12,14 +12,14 @@ def set_module_ports(values):
 	for value in values:
 		try:
 			port = int(value)
-			if port > 60000 or port < 1000:
+			if port > 65000 or port < 1000:
 				raise Exception('Something went wrong')
 			ports.append(port)
 		except:
-			ports.append(random.randint(1000, 60000))
+			ports.append(random.randint(1000, 65000))
 	while True:
 		if len(ports) < 5:
-			ports.append(random.randint(1000, 60000))		
+			ports.append(random.randint(1000, 65000))		
 		else:
 			break
 	return ports

