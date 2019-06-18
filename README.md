@@ -29,12 +29,13 @@ Supported Features:
   - System Information
   - Location Data
 ______________________________________________________
-() = Required
-[] = Optional
-| = Or
+- () = Required
+- [] = Optional
+- | = Or
 
 Shell Commands:
   - Running
+  
 Get data about all the running modules, what client it is running on & its identifying number.
 
   - Stream (Client Index)
