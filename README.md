@@ -182,6 +182,55 @@ A shorthand for using powershell commands in your command prompt shell.
 - Else Command Prompt Data [-t] [-b] [-i]
 
 If no built in command is used everything will be thrown into the clients command prompt as a subprocess returning the data provided. The flags available is "-t" which will thread the command not displaying any data on screen but will execute the command. The "-b" flag will backup the data returned into a textfile & "-i" will provide a black & white image of the results, saving it to a png file. The "-t" flag can't be used in conjunction with "-b" or "-i" but "-b" & "-i" can be used together, in any order just as long as they are in the end of the string data being sent.
+___
+**Options Available**
+___
+- Quick Mode
+
+Simply sets "history" & "whoami" to False. 
+- Username
+
+Set username of the server, default is your Windows username provided by the username enviorment variable.
+- Theme
+
+Sets the color theme of the console, available themes:
+  - light
+  - dark
+  - shade
+  - star
+  - diamond
+  - blood
+  - sky
+  - hacker
+Default is light.
+
+- Encoding
+
+How every byte sent over the sockets will be translated in, latin-1 is the default & it supports any & all characters which utf-8 does not. But the option is open to change after preference.
+- History
+
+This option will create a log & timestamp of when a given client connects & disconnects. Default is True.
+- Whoami
+
+Upon connection systeminfo & location data will be gathered to be saved in a file of the users folder. Default is True.
+- Notice
+
+A system notification upon connection & disconnection of clients. Default is False.
+- Duplicates
+
+To allow multiple connections from one client to be allowed. Deafult is True.
+- Email Notice
+  - Email
+  - Password
+  - To
+
+Get a email notice everytime a client connects, you will have to provide a gmail & gmail password that allows "unsafe" applications to use the email. Also if you want to send this notification to multiple people the "to" option allows that, but by default "to" will automatically be set to your own email. Default is False.
+___
+
+
+
+
+
 
 
 
