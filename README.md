@@ -34,150 +34,150 @@ ______________________________________________________
 - | = Or
 
 Shell Commands:
-  - Running
-  
+- Running
+
 Get data about all the running modules, what client it is running on & its identifying number.
 
-  - Stream (Client Index)
-    - Stream Kill (Client Index | *)
+- Stream (Client Index)
+  - Stream Kill (Client Index | *)
 
 To open a stream of a specific client, opening a window of the clients screen in a live feed.
-  - Cam (Client Index) (Camera Number) (Height,Width)
-    - Cam Kill (Client Index | *)
+- Cam (Client Index) (Camera Number) (Height,Width)
+  - Cam Kill (Client Index | *)
 
 To open a camera stream of the users live webcam, needing to know what webcam number you want to use & the size of the camera. With the help of the devices command this information is provided.
-  - Audio (Client Index)
-    - Audio Kill (Client Index | *)
+- Audio (Client Index)
+  - Audio Kill (Client Index | *)
 
 Listen to a clients microphone input live.
-  - Keylogger (Client Index)
-    - Keylogger Kill (Client Index | *)
-    - Keylogger Text (Client Index)
-    - Keylogger Image (Client Index)
+- Keylogger (Client Index)
+  - Keylogger Kill (Client Index | *)
+  - Keylogger Text (Client Index)
+  - Keylogger Image (Client Index)
 
 Log every key of a client with the option to write out these logs directly in the console or by creating an black & white image of the text.
-  - Talk (Client Index)
-    - Talk Kill (Client Index | *)
+- Talk (Client Index)
+  - Talk Kill (Client Index | *)
 
 Talk directly with the client, in combination with the audio module you can create an audio conversation. 
-  - Server (Ms-Dos Command)
+- Server (Ms-Dos Command)
 
 If you need to use your command prompt of your server, you can do it from within the program.
-  - Archive (Client Username | -a)
+- Archive (Client Username | -a)
 
 Archive the data collected from a specific client or all clients with "-a". This will remove the folder of either the single user or all users after them being archived.
-  - Whoami (Client Index)
+- Whoami (Client Index)
 
 If you've not used whoami upon connect option you can do it manually, gathering vital system information & location data of a client.
-  - All (Session Command)
+- All (Session Command)
 
 Sent a single command to every client & get everyones response. This will create a slight feeling of a botnet but it is slower & is executed in a linear fashion.
-  - List [-l] | Ls [-l]
+- List [-l] | Ls [-l]
 
 List all the connected clients, either with basic information or a long list of who this person is with the "-l" flag.
-  - Session (Client Index)
+- Session (Client Index)
 
 Upon a session with a specific client, this will make more commands available without the "all" or "client" commands & be receptive to command prompt data responses. Note that this session will be timed out after 2 minutes of inactivity returning you back to the managing Shell to be able to keep all the clients alive even when no data is being sent between the sockets. If this happens, you can just reconnect & proceed.
-  - Client (Client Index) (Session Command)
+- Client (Client Index) (Session Command)
 
 Send a session command to a specific client without entering a session with this client.
-  - Del (Client Index | *)
+- Del (Client Index | *)
 
 Delete one or more clients from your server, disconnecting them from you.
-  - Options
+- Options
 
 This will print to the console all available options you can set to improve your experience & change how the program is running.
-  - Set (Setting=Value)
+- Set (Setting=Value)
 
 This will set one of the options provided by the "options" command.
-  - Time
+- Time
 
 This will print out the time you've started the program & the current time.
-  - Banner
+- Banner
 
 Print out the banner that is shown when initially running the program.
-  - Clear | Cls
+- Clear | Cls
 
 Clear the console.
-  - Exit | Quit
+- Exit | Quit
 
 Exit the program for good.
-    
+
 Session Commands:
-  - Running
+- Running
 
 This will return all the running modules (Stream, Cam, Audio, Keylogger, Talk), what client this module is running on & what index that module is bound to, because you can run as many modules on any & all clients at any time you will need to specify that modules id when using module commands shown below.
-  - Stream [IP:PORT]
-    - Stream Kill (Stream Index)
+- Stream [IP:PORT]
+  - Stream Kill (Stream Index)
 
 Stream module along with all the other modules will allow you to specify a custom socket address to connect with, this is usefull if you're using port tunneling to make ports available without the need of port forwarding, otherwise if not specified it will automatically connect to the same module port & ip of the host.
-  - Cam [IP:PORT] (Camera Number) (With,Height)
-    - Cam Kill (Cam Index)
+- Cam [IP:PORT] (Camera Number) (With,Height)
+  - Cam Kill (Cam Index)
 
 Cam module need the camera number, if you have 2 cameras if you want to use the second camera you will have to use number 1, else if the client only has one camera use 0. You will also have to specify the width & height of the camera, this is because of a bug in the cv2 module making it neccesary to save a video file of the camera stream. You can use the devices command to find out the camera number & its size.
-  - Audio [IP:PORT]
-    - Audio Kill (Audio Index)
+- Audio [IP:PORT]
+  - Audio Kill (Audio Index)
 
 The audio module will let you hear any input provided by the client into their microphone.
-  - Keylogger [IP:PORT]
-    - Keylogger Kill (Keylogger Index)
-    - Keylogger Text (Keylogger Index)
-    - Keylogger Image (Keylogger Index)
+- Keylogger [IP:PORT]
+  - Keylogger Kill (Keylogger Index)
+  - Keylogger Text (Keylogger Index)
+  - Keylogger Image (Keylogger Index)
 
 The keylogger module gives you the option of writing out all the logs provided by the client in text format or vizualize the text into an black & white image with the help of the text & image commands.
-  - Talk [IP:PORT]
-    - Talk Kill (Talk Index)
+- Talk [IP:PORT]
+  - Talk Kill (Talk Index)
 
 The talk module will allow you to talk into your microphone & the client will hear you, this can be used in conjunction with the audio module creating a audio conversation possibility.
-  - Upload (File Name) [-e]
+- Upload (File Name) [-e]
 
 The "-e" option will automatically execute the uploaded file on the clients computer.
-  - Note => [File Name] => (Message)
+- Note => [File Name] => (Message)
 
 The note command will create a specific folder storing all your notes about a specific client with timestamps. The "File Name" is an option because otherwise it will be saved to global.txt as it is the default, .txt will also automatically if you choose to set a file name. This command can be used to handle & organize your thoughts & ideas when dealing with multiple clients. Having the notes as a backup.
-  - Whoami
+- Whoami
 
 The whoami command provides you with all the systeminfo & location data along with the initial socket data written out to the console. Making it clear who this client is & all the neccesary data you will need.
-  - Time
+- Time
 
 Gives you the time the session started & what the current time is.
-  - Clear | Cls
+- Clear | Cls
 
 Clears the console.
-  - Exit | Quit
+- Exit | Quit
 
 Exit the session & go back to your managing Shell.
-  - Download (File Name) [-e]
+- Download (File Name) [-e]
 
 Download a file with the option to execute upon successful download.
-  - Screenshot [-s]
+- Screenshot [-s]
 
 Download a screenshot of the clients computer with the option to automatically show the screenshot taken.
-  - Webcam (Camera Number) [-s]
+- Webcam (Camera Number) [-s]
 
 Webcam will take a screenshot of a specified camera with the help of the camera number, with the option to automatically show the screenshot taken.
-  - cd (File Path)
+- cd (File Path)
 
 Change the directory of you session shell & navigate as you would a normal command prompt. Note that system variables cannot be used.
-  - Elevate (File Path)
+- Elevate (File Path)
 
 This will attempt to run the specified executeable program as administrator, if you run this on this script successfully you will be provided with an administrator shell having the privilege to create services & edit the Windows registry.
-  - Service (Type) (Service Name) (File Path)
+- Service (Type) (Service Name) (File Path)
 
 If you successfully acquired a administrator shell you can create & edit services. This will make your script sticky, automatically running the program upon startup without any questions. First have to specify either to "delete" or "create" the service, the name of Z service & the absolute path of the executeable.
-  - Devices
+- Devices
 
 Get all the webcams available on the client computer, the sizes of the cameras & their camera number.
-  - Message => [Title] => (Message) => [Style]
+- Message => [Title] => (Message) => [Style]
 
 Show a message box to the client, the title of the messagebox, the default is "Message", the text of the message box & optionally the icon to be used ranging from 1-4.
-  - Open (Url[,Url2, Url3, Url4])
+- Open (Url[,Url2, Url3, Url4])
 
 Opens one or more urls in the clients default browser.
-  - ps (Powershell Command)
+- ps (Powershell Command)
 
 A shorthand for using powershell commands in your command prompt shell.
-  - Else Command Prompt Data [-t] [-b] [-i]
+- Else Command Prompt Data [-t] [-b] [-i]
 
 If no built in command is used everything will be thrown into the clients command prompt as a subprocess returning the data provided. The flags available is "-t" which will thread the command not displaying any data on screen but will execute the command. The "-b" flag will backup the data returned into a textfile & "-i" will provide a black & white image of the results, saving it to a png file. The "-t" flag can't be used in conjunction with "-b" or "-i" but "-b" & "-i" can be used together, in any order just as long as they are in the end of the string data being sent.
 
