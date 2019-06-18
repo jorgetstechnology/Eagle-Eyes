@@ -1,5 +1,5 @@
 # Eagle-Eyes
-Eagle Eyes => A powerful low level TCP networking RAT.
+Eagle Eyes => A powerful low level TCP networking RAT written in the Python langauge for Windows.
 ______________________________________________________
 Eagle Eyes is a spyware Python program created for Windows that supports multiple ways to collect data & automatically save everything organized in folders. It has two shells you will use, the first shell is to control & manage clients & options. It is also from this shell you have can connect to a client session. This will give a reverse shell like connection to a specific client with extra built in commands.
 ______________________________________________________
@@ -35,32 +35,72 @@ ______________________________________________________
 
 Shell Commands:
   - Running
+Get data about all the running modules, what client it is running on & its identifying number.
+
   - Stream (Client Index)
     - Stream Kill (Client Index | *)
+
+To open a stream of a specific client, opening a window of the clients screen in a live feed.
   - Cam (Client Index) (Camera Number) (Height,Width)
     - Cam Kill (Client Index | *)
+
+To open a camera stream of the users live webcam, needing to know what webcam number you want to use & the size of the camera. With the help of the devices command this information is provided.
   - Audio (Client Index)
     - Audio Kill (Client Index | *)
+
+Listen to a clients microphone input live.
   - Keylogger (Client Index)
     - Keylogger Kill (Client Index | *)
     - Keylogger Text (Client Index)
     - Keylogger Image (Client Index)
+
+Log every key of a client with the option to write out these logs directly in the console or by creating an black & white image of the text.
   - Talk (Client Index)
     - Talk Kill (Client Index | *)
+
+Talk directly with the client, in combination with the audio module you can create an audio conversation. 
   - Server (Ms-Dos Command)
+
+If you need to use your command prompt of your server, you can do it from within the program.
   - Archive (Client Username | -a)
+
+Archive the data collected from a specific client or all clients with "-a". This will remove the folder of either the single user or all users after them being archived.
   - Whoami (Client Index)
+
+If you've not used whoami upon connect option you can do it manually, gathering vital system information & location data of a client.
   - All (Session Command)
+
+Sent a single command to every client & get everyones response. This will create a slight feeling of a botnet but it is slower & is executed in a linear fashion.
   - List [-l] | Ls [-l]
+
+List all the connected clients, either with basic information or a long list of who this person is with the "-l" flag.
   - Session (Client Index)
+
+Upon a session with a specific client, this will make more commands available without the "all" or "client" commands & be receptive to command prompt data responses. Note that this session will be timed out after 2 minutes of inactivity returning you back to the managing Shell to be able to keep all the clients alive even when no data is being sent between the sockets. If this happens, you can just reconnect & proceed.
   - Client (Client Index) (Session Command)
+
+Send a session command to a specific client without entering a session with this client.
   - Del (Client Index | *)
+
+Delete one or more clients from your server, disconnecting them from you.
   - Options
+
+This will print to the console all available options you can set to improve your experience & change how the program is running.
   - Set (Setting=Value)
+
+This will set one of the options provided by the "options" command.
   - Time
+
+This will print out the time you've started the program & the current time.
   - Banner
+
+Print out the banner that is shown when initially running the program.
   - Clear | Cls
+
+Clear the console.
   - Exit | Quit
+
+Exit the program for good.
     
 Session Commands:
   - Running
