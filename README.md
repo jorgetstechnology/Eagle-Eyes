@@ -1,6 +1,6 @@
 # Eagle-Eyes
 Eagle Eyes => A powerful low level TCP networking RAT.
-	______________________________________________________
+______________________________________________________
 Supported Features:
   - TCP Network stream (IPv4)
   - Compression & AES256 Encryption
