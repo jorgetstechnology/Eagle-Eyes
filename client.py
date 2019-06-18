@@ -324,8 +324,6 @@ class Client:
 
 if __name__ == '__main__':
 	try:
-		# data = requests.get('https://data-supply.herokuapp.com/').json()
-		# client = Client(data['ip'], data['port'], data['encoding'])
 		client = Client()
 		client.connect()
 		client.listen()
