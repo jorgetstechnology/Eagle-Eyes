@@ -202,6 +202,7 @@ Sets the color theme of the console, available themes:
   - blood
   - sky
   - hacker
+
 Default is light.
 
 - Encoding
