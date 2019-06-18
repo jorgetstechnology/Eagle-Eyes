@@ -227,6 +227,25 @@ To allow multiple connections from one client to be allowed. Deafult is True.
 
 Get a email notice everytime a client connects, you will have to provide a gmail & gmail password that allows "unsafe" applications to use the email. Also if you want to send this notification to multiple people the "to" option allows that, but by default "to" will automatically be set to your own email. Default is False.
 ___
+**Command Line Unique Options**
+___
+All of the options above can be set with the help of command line arguments when running the program. But there are also some unique ones.
+
+* --banner | -b
+
+To not show banner upon running script. Default is False.
+* --internet_protocol (IP) | -ip (IP)
+
+To specify the hosting IP of the server, default is 127.0.0.1.
+* --port (Port) | -p (Port)
+
+To specify a port which you client script will connect to. Default is 1200.
+* --module_ports (Module Ports) | -mP (Module Ports)
+
+The ports of the modules, because they use individual socket connections. Default is 1201,1202,1203,1204,1205.
+* --use_latest
+
+To use the most recent "IP", "Port" & "Module Ports" if you simply want to use what you used last time running the script. Default is False.
 
 
 
