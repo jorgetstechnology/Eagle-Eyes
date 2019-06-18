@@ -116,7 +116,10 @@ Opens one or more urls in the clients default browser.
 A shorthand for using powershell commands in your command prompt shell.
   - Else Command Prompt Data [-t] [-b] [-i]
 If no built in command is used everything will be thrown into the clients command prompt as a subprocess returning the data provided. The flags available is "-t" which will thread the command not displaying any data on screen but will execute the command. The "-b" flag will backup the data returned into a textfile & "-i" will provide a black & white image of the results, saving it to a png file. The "-t" flag can't be used in conjunction with "-b" or "-i" but "-b" & "-i" can be used together, in any order just as long as they are in the end of the string data being sent.
-  
+
+
+
+
   
   
   
