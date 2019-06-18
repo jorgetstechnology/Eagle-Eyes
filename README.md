@@ -273,7 +273,7 @@ To specify a port which you client script will connect to. Default is 1200.
 * --module_ports (Module Ports) | -mP (Module Ports)
 
 The ports of the modules, because they use individual socket connections. Default is 1201,1202,1203,1204,1205.
-* --use_latest
+* --use_latest | -uL
 
 To use the most recent "IP", "Port" & "Module Ports" if you simply want to use what you used last time running the script. Default is False.
 
