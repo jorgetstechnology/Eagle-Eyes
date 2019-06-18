@@ -248,26 +248,3 @@ The ports of the modules, because they use individual socket connections. Defaul
 To use the most recent "IP", "Port" & "Module Ports" if you simply want to use what you used last time running the script. Default is False.
 
 ** To get every flag available as a command line argument simply run the script with as such: "Python server.py -h".**
-
-
-
-
-
-
-
-
-
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
