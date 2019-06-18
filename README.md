@@ -18,6 +18,7 @@ Your server address might be changing when specifying it in the client script so
 __Example of this__
 
 data = requests.get('https://your_app_name.herokuapp.com/').json()
+
 client = Client(data['ip'], data['port'], data['encoding'])
 ___
 ## Making the script an exe
