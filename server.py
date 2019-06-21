@@ -21,6 +21,7 @@
 		* Visit Website
 		* Upload (& Execute)
 		* Download (& Execute)
+		* Botnet like functionality
 		* Privilege Escalation
 		* Service Creation
 		* System Information
