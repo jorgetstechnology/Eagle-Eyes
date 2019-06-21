@@ -230,7 +230,7 @@ This option will create a log & timestamp of when a given client connects & disc
 Upon connection systeminfo & location data will be gathered to be saved in a file of the users folder. Default is True.
 - Notice
 
-A system notification upon connection & disconnection of clients. Default is False.
+A system notification upon connection & disconnection of clients. Default is True.
 - Duplicates
 
 To allow multiple connections from one client to be allowed. Deafult is True.
