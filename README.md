@@ -59,9 +59,7 @@ ___
 - () = Required
 - [] = Optional
 - | = Or
-___
 ## Shell Commands:
-___
 - Running
 
 Get data about all the running modules, what client it is running on & its identifying number.
@@ -130,9 +128,7 @@ Clear the console.
 - Exit | Quit
 
 Exit the program for good.
-___
 ## Session Commands:
-___
 - Running
 
 This will return all the running modules (Stream, Cam, Audio, Keylogger, Talk), what client this module is running on & what index that module is bound to, because you can run as many modules on any & all clients at any time you will need to specify that modules id when using module commands shown below.
@@ -209,9 +205,7 @@ A shorthand for using powershell commands in your command prompt shell.
 - Else Command Prompt Data [-t] [-b] [-i]
 
 If no built in command is used everything will be thrown into the clients command prompt as a subprocess returning the data provided. The flags available is "-t" which will thread the command not displaying any data on screen but will execute the command. The "-b" flag will backup the data returned into a textfile & "-i" will provide a black & white image of the results, saving it to a png file. The "-t" flag can't be used in conjunction with "-b" or "-i" but "-b" & "-i" can be used together, in any order just as long as they are in the end of the string data being sent.
-___
 ## Options Available
-___
 - Quick Mode
 
 Simply sets "history" & "whoami" to False. 
@@ -253,9 +247,7 @@ To allow multiple connections from one client to be allowed. Deafult is True.
   - To
 
 Get a email notice everytime a client connects, you will have to provide a gmail & gmail password that allows "unsafe" applications to use the email. Also if you want to send this notification to multiple people the "to" option allows that, but by default "to" will automatically be set to your own email. Default is False.
-___
 ## Command Line Unique Options
-___
 All of the options above can be set with the help of command line arguments when running the program. But there are also some unique ones.
 
 * --banner | -b
