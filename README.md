@@ -6,9 +6,6 @@ ___
 ## Examples of running the server script:
 - Python server.py
 - Python server.py -h
-- Python server.py -ip 169.252.134.102 -p 1300 -mP 1301,1302,1303,1304,1305
-- Python server.py --use_latest
-- Python server.py --username Enes --theme hacker
 ## Examples of running the client script:
 - Python client.py
 ___
