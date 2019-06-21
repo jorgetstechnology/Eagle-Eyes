@@ -54,7 +54,7 @@ parser.add_argument('-b', '--banner', action='store_false', help='To display the
 parser.add_argument('-u', '--username', default=None, help='Set the username of your server. Default is your computers username.')
 parser.add_argument('-t', '--theme', default='light', help='Specify theme the program. specify dark for white terminal windows. Default is light.')
 parser.add_argument('-e', '--encoding', default='latin-1', help='Encoding to be used when sending & recieveing data over the wire, default is latin-1.')
-parser.add_argument('-n', '--notice', action='store_true', help='To recieve a notice in the console when a client connect to the server. Default is True.')
+parser.add_argument('-n', '--notice', action='store_false', help='To recieve a notice in the console when a client connect to the server. Default is True.')
 parser.add_argument('-eN', '--email_notice', default='False,None,None,[]', help='To recieve a notice in your email when a client connect to the server, format: True|False,email,email password, other emails than your own seperated by comma (Optional). Default is False,None,None,[]')
 parser.add_argument('-d', '--duplicates', action='store_false', help='To enable duplicate connections from the same computer, this is recognized matching computers usernames. Can be enabled in cases of multiple persons with the exact same username. Default is False.')
 parser.add_argument('-w', '--whoami', action='store_false', help='To disable collecting detailed information on client connection. May be a choice for recurring or frequent clients connecting, making the connection faster. Default is True.')
