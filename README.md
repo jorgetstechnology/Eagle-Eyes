@@ -23,10 +23,10 @@ __To make your script an exe you can use Pyinstaller with "pip install pyinstall
 
 Here are some examples of creating the executeable:
 
-- pyinstaller -F -i server.ico server.py
+- pyinstaller -F -i YOUR_SERVER_ICON.ico server.py
 
-Using the "server.ico" as icon with "-i" & making it a single file with "-F".
-- pyinstaller -F -w -i client.ico client.py
+Using the "YOUR_SERVER_ICON.ico" as icon with "-i" & making it a single file with "-F".
+- pyinstaller -F -w -i YOUR_CLIENT_ICON.ico client.py
 
 Also using "-w" when building the client script to make it a windowless application.
 ___
