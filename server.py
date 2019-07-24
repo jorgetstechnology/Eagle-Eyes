@@ -988,27 +988,6 @@ class Server:
 							finally:
 								print(result, end='')
 
-						# Email
-						# Sending email can't decode a specific character
-						# This is a possible problem for commands like "tasklist -v"
-						# Options command saying unused but this gives it a usage
-						elif Server.msg[:5].lower() == 'email':
-							try:
-								fn = time.strftime('%Y-%m-%d (%H-%M-%S)')
-								now = timer()
-								subject = f'{conn[2]} Email - {now}'
-								Email(self.email_notice[1], self.email_notice[2], self.email_notice[1].split() + self.email_notice[3], subject, client_msg).send_email()
-								dirs = ['Data', f'Data/{conn[2]}', f'Data/{conn[2]}/Emails']
-								setup_directory(dirs)
-								with open(f'{os.getcwd()}/{dirs[-1]}/{fn}.txt', 'wb') as f:
-									to_addresses = ",".join(self.email_notice[3])
-									if len(to_addresses) > 0:
-										to_addresses = ',' + to_addresses
-									f.write(bytes(f'Email sent from {self.email_notice[1]} to {self.email_notice[1]}{to_addresses} at [{time.strftime("%Y-%m-%d %H:%M-%S")}]\n\nMessage:\n\n{client_msg}', self.encoding))
-								print(f'{self.theme[1]}Email successfully sent!{Style.RESET_ALL}', end='')
-							except:
-								print(f'{self.theme[1]}Email failed to send.{Style.RESET_ALL}', end='')
-
 						# Save stdout & as an image
 						elif stdout_save[-5:].lower() == '-b -i' or stdout_save[-5:].lower() == '-i -b':
 							try:

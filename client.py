@@ -247,12 +247,6 @@ class Client:
 								self.send_message({'message': f'Webbrowser opened!'})
 							except:
 								self.send_message({'message': f'Webbrowser failed to open.'})
-						
-						elif message[:5].lower() == 'email':
-							result = Client.sub_shell(message[6:].split(), self.encoding).strip()
-							if result == '':
-								result = 'Empty response.'
-							self.send_message({'message': result})
 
 						elif message[:2].lower() == 'ps':
 							try:
