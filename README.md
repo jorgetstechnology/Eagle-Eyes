@@ -1,7 +1,3 @@
-
-# DISCLAIMER
-**Eagle Eyes is for education/research purposes only. The author takes NO responsibility and/or liability for how you choose to use any of the tools/source code/any files provided. The author and anyone affiliated with will not be liable for any losses and/or damages in connection with use of ANY files provided with Eagle Eyes. By using Eagle Eyes or any files included, you understand that you are AGREEING TO USE AT YOUR OWN RISK. Once again Eagle Eyes and ALL files included are for EDUCATION and/or RESEARCH purposes ONLY. Eagle Eyes is ONLY intended to be used on your own pentesting labs, or with explicit consent from the owner of the property being tested.**
-
 # Eagle Eyes
 Eagle Eyes => A powerful low level TCP networking RAT written in the Python langauge for Windows.
 ## Description
@@ -268,3 +264,6 @@ The ports of the modules, because they use individual socket connections. Defaul
 To use the most recent "IP", "Port" & "Module Ports" if you simply want to use what you used last time running the script. Default is False.
 
 ** To get every flag available as a command line argument simply run the script with as such: "Python server.py -h".**
+
+# DISCLAIMER
+**Eagle Eyes is for education/research purposes only. The author takes NO responsibility and/or liability for how you choose to use any of the tools/source code/any files provided. The author and anyone affiliated with will not be liable for any losses and/or damages in connection with use of ANY files provided with Eagle Eyes. By using Eagle Eyes or any files included, you understand that you are AGREEING TO USE AT YOUR OWN RISK. Once again Eagle Eyes and ALL files included are for EDUCATION and/or RESEARCH purposes ONLY. Eagle Eyes is ONLY intended to be used on your own pentesting labs, or with explicit consent from the owner of the property being tested.**
